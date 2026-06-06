@@ -30,6 +30,11 @@ export default function RootLayout({ children }) {
           <Link href={`/blogs`}>blogs</Link>
      </nav>
       <body className="min-h-full flex flex-col">{children}</body>
+      <div className="flex bg-gray-800 justify-center items-center  bottom-0 fixed w-full p-5">
+      <footer>
+            <h2 className="font-bold text-2xl">Made with Next.js and Designed with TailwindCSS</h2> 
+      </footer>
+</div>
     </html>
   );
 }
