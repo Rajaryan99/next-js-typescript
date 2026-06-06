@@ -1,3 +1,4 @@
+import Link from 'next/link'
 import React from 'react'
 
 export default function page() {
@@ -26,15 +27,16 @@ export default function page() {
 
   return (
     <>
-    {  console.log('hello World')}
-
-      <h1>Blogs</h1>
+   
+<div className=' w-[100px] m-5 p-4 bg-amber-600 font-bold text-2xl rounded-2xl'>
+      <h1 className=' '>Blogs</h1>
+      </div>
 
       {posts.map((post) => (
         <div key={post.id}>
-          <a href={`/blogs/${post.id}`}>
+          <Link href={`/blogs/${post.id}`}>
             <h2 className='font-bold text-blue-400 text-3xl'>{post.title}</h2>
-          </a>
+          </Link>
           <p>{post.content}</p>
         </div>
       ))}
