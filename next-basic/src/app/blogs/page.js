@@ -35,7 +35,7 @@ export default async function page() {
       <h1 className=' '>Blogs</h1>
       </div>
 
-      <div className='grid grid-cols-3 gap-4 p-4'>
+      <div className=' flex justify-center text-center grid grid-cols-3 p-4'>
 
       {posts.map((post) => (
         <div key={post.id} className='p-4 m-4 h-[400px] w-[350px]  overflow-hidden border-2 border-gray-300 rounded-lg '>
