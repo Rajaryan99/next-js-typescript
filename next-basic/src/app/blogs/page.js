@@ -27,6 +27,7 @@ export default async function page() {
   // ]
 
   console.log('posts = ' + posts)
+  console.log("data = " + data)
 
   return (
     <>
