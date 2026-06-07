@@ -24,11 +24,11 @@ export default function RootLayout({ children }) {
       className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
     >
 
-       <nav className="flex gap-4 p-4 bg-gray-800 text-xl font-bold">
+       <div className="flex gap-4 p-4 bg-gray-800 text-xl font-bold">
           <Link href={`/`}>Logo</Link>
           <Link href={`/home`}>Home</Link>
           <Link href={`/blogs`}>blogs</Link>
-     </nav>
+     </div>
       <body className="min-h-full flex flex-col">{children}</body>
       <div className="flex bg-gray-800 justify-center items-center  bottom-0 fixed w-full p-5">
       <footer>

@@ -1,10 +1,11 @@
 import Link from 'next/link'
-import React from 'react'
+import React, { Suspense } from 'react'
+import Posts from './components/Posts'
 
 export default async function page() {
 
-  const data = await fetch('https://jsonplaceholder.typicode.com/posts', {cache: "no-store"})
-  const posts = await data.json()
+  // const data = await fetch('https://jsonplaceholder.typicode.com/posts', {cache: "no-store"})
+  // const posts = await data.json()
 
 
   // const posts = [
@@ -26,17 +27,18 @@ export default async function page() {
 
   // ]
 
-  console.log('posts = ' + posts)
-  console.log("data = " + data)
+
+  const posts = fetch('https://jsonplaceholder.typicode.com/posts', { cache: "no-store" }).then((res) => res.json())
+  
 
   return (
     <>
    
-<div className=' w-[100px] m-5 p-4 bg-amber-600 font-bold text-2xl rounded-3xl'>
+<div className=' w-[500px] m-5 p-4 bg-amber-600 font-bold text-2xl rounded-3xl'>
       <h1 className=' '>Blogs chnage the way things work</h1>
       </div>
 
-      <div className=' flex justify-center text-center grid grid-cols-3 p-4'>
+      {/* <div className=' flex justify-center text-center grid grid-cols-3 p-4'>
 
       {posts.map((post) => (
         <div key={post.id} className='p-4 m-4 h-[400px] w-[350px]  overflow-hidden border-2 border-gray-300 rounded-lg '>
@@ -48,7 +50,11 @@ export default async function page() {
 
 
       ))}
-      </div>
+      </div> */}
+
+      <Suspense fallback={<h1>Loading...</h1>}>
+      <Posts posts={posts} />
+      </Suspense>
     </>
   )
 }
