@@ -32,8 +32,8 @@ export default async function page() {
   return (
     <>
    
-<div className=' w-[100px] m-5 p-4 bg-amber-600 font-bold text-2xl rounded-2xl'>
-      <h1 className=' '>Blogs</h1>
+<div className=' w-[100px] m-5 p-4 bg-amber-600 font-bold text-2xl rounded-3xl'>
+      <h1 className=' '>Blogs chnage the way things work</h1>
       </div>
 
       <div className=' flex justify-center text-center grid grid-cols-3 p-4'>
